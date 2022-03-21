@@ -1,0 +1,74 @@
+
+.main {
+max-width: 100%;
+max-height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: pink;
+    z-index: 0;
+    flex-direction: row;
+}
+
+.rt-img {
+
+    max-width: 40rem;
+    max-height: 20rem;
+    background-color: aquamarine;
+ z-index: 1;
+ border: 1px solid blue;
+}
+
+.downcard {
+max-width: 100%;
+max-height: 30%;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    
+}
+
+.square-1 {
+max-height: auto;
+max-width: auto;
+    grid-column: 1;
+    background-color: black;
+}
+
+.square-2 {
+    max-height: auto;
+    max-width: auto;
+    grid-column: 2;
+    background-color: aquamarine;
+}
+
+.square-3 {
+    max-height: auto;
+    max-width: auto;
+    grid-column: 3;
+    background-color: black;
+}
+
+@media screen and (max-width: 700px) { 
+
+    .main {
+
+        flex-direction: column;
+    }
+    
+    .downcard {
+
+        grid-template-columns: none;
+        grid-template-rows: repeat(3 2fr);
+    }
+
+    .square-1 {
+        grid-row: 1;
+    }
+
+    .square-2 {
+        grid-row: 2;
+    }
+
+    .square-3 {
+        grid-row: 3;
+    }
+}
